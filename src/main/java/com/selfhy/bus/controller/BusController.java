@@ -68,7 +68,7 @@ public class BusController {
 	@PostMapping("/")
 	@ApiOperation(value = "", authorizations = { @Authorization(value = "apiKey") })
 	@PreAuthorize("hasRole('ADMIN')")
-	public ResponseEntity<?> addBus(@Valid @RequestBody BusRequest busRequest) {
+	public ResponseEntity<?> addBus(@RequestBody BusRequest busRequest) {
 		Agency agency= agencyRepository.findById(busRequest.getAgencyId()).get();
 		Bus bus= new Bus(busRequest.getCode(), busRequest.getCapacity(), busRequest.getMake(), agency);
 		return ResponseEntity
