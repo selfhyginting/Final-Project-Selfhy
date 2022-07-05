@@ -96,9 +96,8 @@ public class AgencyController {
 		agency.setDetails(agencyDetail.getDetails());
 		agency.setOwner(user);
 
-		Agency updatedAgency = agencyRepository.save(agency);
-
-		return ResponseEntity.ok(new MessageResponse<Agency>(true, "Success Updating Data", updatedAgency));
+		agencyRepository.save(agency);
+		return ResponseEntity.ok(new MessageResponse("Success Update Data"));
 	}
 
 	@DeleteMapping("/{id}")

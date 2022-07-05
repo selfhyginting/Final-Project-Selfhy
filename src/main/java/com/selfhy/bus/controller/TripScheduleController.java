@@ -93,9 +93,8 @@ public class TripScheduleController {
 		tripSchedule.setTripDate(tripScheduleDetail.getTripDate());
 		tripSchedule.setTripDetail(trip);
 
-		TripSchedule updatedTripSchedule= tripScheduleRepository.save(tripSchedule);
-
-		return ResponseEntity.ok(new MessageResponse<TripSchedule>(true, "Success Updating Data", updatedTripSchedule));
+		tripScheduleRepository.save(tripSchedule);
+		return ResponseEntity.ok(new MessageResponse("Success Update Data"));
 	}
 
 	@DeleteMapping("/{id}")

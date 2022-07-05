@@ -93,9 +93,8 @@ public class BusController {
 		bus.setMake(busDetail.getMake());
 		bus.setAgency(agency);
 
-		Bus updatedBus = busRepository.save(bus);
-
-		return ResponseEntity.ok(new MessageResponse<Bus>(true, "Success Updating Data", updatedBus));
+		busRepository.save(bus);
+		return ResponseEntity.ok(new MessageResponse("Success Update Data"));
 	}
 
 	@DeleteMapping("/{id}")

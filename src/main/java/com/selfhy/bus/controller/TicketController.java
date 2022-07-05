@@ -105,9 +105,7 @@ public class TicketController {
 		ticket.setTripSchedule(tripSchedule);
 
 		ticketRepository.save(ticket);
-		Ticket updatedTicket = ticket;
-
-		return ResponseEntity.ok(new MessageResponse<Ticket>(true, "Success Updating Data", updatedTicket));
+		return ResponseEntity.ok(new MessageResponse("Success Update Data"));
 	}
 
 	@DeleteMapping("/{id}")

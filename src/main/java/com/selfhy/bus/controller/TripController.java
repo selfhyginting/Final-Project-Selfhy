@@ -130,9 +130,8 @@ public class TripController {
 		trip.setBus(bus);
 		trip.setAgency(agency);
 
-		Trip updatedTrip= tripRepository.save(trip);
-
-		return ResponseEntity.ok(new MessageResponse<Trip>(true, "Success Updating Data", updatedTrip));
+		tripRepository.save(trip);
+		return ResponseEntity.ok(new MessageResponse("Success Update Data"));
 	}
 
 	@DeleteMapping("/trip/{id}")

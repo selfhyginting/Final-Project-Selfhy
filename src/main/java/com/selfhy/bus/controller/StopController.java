@@ -89,9 +89,8 @@ public class StopController {
 		stop.setName(stopDetail.getName());
 		stop.setDetail(stopDetail.getDetail());
 
-		Stop updatedStop = stopRepository.save(stop);
-
-		return ResponseEntity.ok(new MessageResponse<Stop>(true, "Success Updating Data", updatedStop));
+		stopRepository.save(stop);
+		return ResponseEntity.ok(new MessageResponse("Success Update Data"));
 	}
 
 	@DeleteMapping("/{id}")
