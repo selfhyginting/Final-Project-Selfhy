@@ -27,6 +27,14 @@ public class TripScheduleRequest {
 		this.tripId = tripId;
 	}
 
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+	
 	public String getTripDate() {
 		return tripDate;
 	}

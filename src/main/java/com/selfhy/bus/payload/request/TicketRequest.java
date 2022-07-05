@@ -34,6 +34,14 @@ public class TicketRequest {
 		this.tripScheduleId = tripScheduleId;
 	}
 
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
 	public int getSeatNumber() {
 		return seatNumber;
 	}
