@@ -3,6 +3,7 @@ Final Project Bus Reservation API
 Nama		: Selfhy Agina Ginting
 Nomor Peserta	: JVSB001ONL011
 Program		: BTDP - Back End Development With Java Springboot Hactiv8 
+Link Github	: https://github.com/selfhyginting/Final-Project-Selfhy 
 
 Deskripsi :
 
