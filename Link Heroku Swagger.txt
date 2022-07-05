@@ -1,0 +1,3 @@
+https://selfhy-final-project.herokuapp.com/swagger-ui.html
+
+(Mohon untuk berkenan menunggu link Swagger Final Project Selfhy hingga tampil, swagger membutuhkan waktu untuk tampil)

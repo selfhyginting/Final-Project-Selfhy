@@ -1,0 +1,1366 @@
+{
+	"info": {
+		"_postman_id": "ab124350-47ae-4718-ab36-79bf460b9331",
+		"name": "Final Project Selfhy RESTAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Register User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\": \"string\",\r\n  \"firstName\": \"string\",\r\n  \"lastName\": \"string\",\r\n  \"mobileNumber\": \"string\",\r\n  \"password\": \"string\",\r\n  \"role\": [\r\n    \"string\"\r\n  ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://selfhy-final-project.herokuapp.com/api/v1/user/signup",
+							"protocol": "https",
+							"host": [
+								"selfhy-final-project",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update User",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzZWxmaHkuZ2ludGluZ0BiZmkuY28uaWQiLCJpYXQiOjE2NTY4NjUyNjYsImV4cCI6MTY1Njk1MTY2Nn0.BCVcbAibZPkiJ2v3oDQR1jxOBr9aF91KVUC32ljEk4DxbYA_9JPsCiiv2X9YXudC0W2qd9kExhsIWiQptDht1Q",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "default",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"firstName\": \"string\",\r\n  \"lastName\": \"string\",\r\n  \"mobileNumber\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://selfhy-final-project.herokuapp.com/api/v1/user/1",
+							"protocol": "https",
+							"host": [
+								"selfhy-final-project",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Password User",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"password\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://selfhy-final-project.herokuapp.com/api/v1/user/password/1",
+							"protocol": "https",
+							"host": [
+								"selfhy-final-project",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"password",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete User",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://selfhy-final-project.herokuapp.com/api/v1/user/2",
+							"protocol": "https",
+							"host": [
+								"selfhy-final-project",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\": \"selfhy.ginting@bfi.co.id\",\r\n  \"password\": \"admin123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://selfhy-final-project.herokuapp.com/api/v1/auth/",
+							"protocol": "https",
+							"host": [
+								"selfhy-final-project",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Agency",
+			"item": [
+				{
+					"name": "List Agency",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzZWxmaHkuZ2ludGluZ0BiZmkuY28uaWQiLCJpYXQiOjE2NTcwMjY1NTgsImV4cCI6MTY1NzExMjk1OH0.U56Rz80HHix-hQibLtObA22FzV4gbUQ65oLrTx4m3ME1U45SnFLkLVMjXTwdGzLfntXF2FlHeyjZOERoMYYHSg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://selfhy-final-project.herokuapp.com/api/v1/agency/",
+							"protocol": "https",
+							"host": [
+								"selfhy-final-project",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"agency",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Detail Agency",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzZWxmaHkuZ2ludGluZ0BiZmkuY28uaWQiLCJpYXQiOjE2NTcwMjY1NTgsImV4cCI6MTY1NzExMjk1OH0.U56Rz80HHix-hQibLtObA22FzV4gbUQ65oLrTx4m3ME1U45SnFLkLVMjXTwdGzLfntXF2FlHeyjZOERoMYYHSg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://selfhy-final-project.herokuapp.com/api/v1/agency/2",
+							"protocol": "https",
+							"host": [
+								"selfhy-final-project",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"agency",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Agency",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"code\": \"string\",\r\n  \"details\": \"string\",\r\n  \"name\": \"string\",\r\n  \"owner\": 0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://selfhy-final-project.herokuapp.com/api/v1/agency/",
+							"protocol": "https",
+							"host": [
+								"selfhy-final-project",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"agency",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Request",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzZWxmaHkuZ2ludGluZ0BiZmkuY28uaWQiLCJpYXQiOjE2NTcwMjY1NTgsImV4cCI6MTY1NzExMjk1OH0.U56Rz80HHix-hQibLtObA22FzV4gbUQ65oLrTx4m3ME1U45SnFLkLVMjXTwdGzLfntXF2FlHeyjZOERoMYYHSg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"code\": \"string\",\r\n  \"details\": \"string\",\r\n  \"name\": \"string\",\r\n  \"owner\": 0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://selfhy-final-project.herokuapp.com/api/v1/agency/1",
+							"protocol": "https",
+							"host": [
+								"selfhy-final-project",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"agency",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Agency",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzZWxmaHkuZ2ludGluZ0BiZmkuY28uaWQiLCJpYXQiOjE2NTcwMjY1NTgsImV4cCI6MTY1NzExMjk1OH0.U56Rz80HHix-hQibLtObA22FzV4gbUQ65oLrTx4m3ME1U45SnFLkLVMjXTwdGzLfntXF2FlHeyjZOERoMYYHSg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://selfhy-final-project.herokuapp.com/api/v1/agency/1",
+							"protocol": "https",
+							"host": [
+								"selfhy-final-project",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"agency",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Bus",
+			"item": [
+				{
+					"name": "List Bus",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzZWxmaHkuZ2ludGluZ0BiZmkuY28uaWQiLCJpYXQiOjE2NTcwMjY1NTgsImV4cCI6MTY1NzExMjk1OH0.U56Rz80HHix-hQibLtObA22FzV4gbUQ65oLrTx4m3ME1U45SnFLkLVMjXTwdGzLfntXF2FlHeyjZOERoMYYHSg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://selfhy-final-project.herokuapp.com/api/v1/bus/",
+							"protocol": "https",
+							"host": [
+								"selfhy-final-project",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"bus",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Detail Bus",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzZWxmaHkuZ2ludGluZ0BiZmkuY28uaWQiLCJpYXQiOjE2NTcwMjY1NTgsImV4cCI6MTY1NzExMjk1OH0.U56Rz80HHix-hQibLtObA22FzV4gbUQ65oLrTx4m3ME1U45SnFLkLVMjXTwdGzLfntXF2FlHeyjZOERoMYYHSg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://selfhy-final-project.herokuapp.com/api/v1/bus/1",
+							"protocol": "https",
+							"host": [
+								"selfhy-final-project",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"bus",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Bus",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzZWxmaHkuZ2ludGluZ0BiZmkuY28uaWQiLCJpYXQiOjE2NTcwMjY1NTgsImV4cCI6MTY1NzExMjk1OH0.U56Rz80HHix-hQibLtObA22FzV4gbUQ65oLrTx4m3ME1U45SnFLkLVMjXTwdGzLfntXF2FlHeyjZOERoMYYHSg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"code\": \"string\",\r\n  \"capacity\": 0,\r\n  \"make\": \"string\",\r\n  \"agencyId\": 0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://selfhy-final-project.herokuapp.com/api/v1/bus/",
+							"protocol": "https",
+							"host": [
+								"selfhy-final-project",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"bus",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Bus",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzZWxmaHkuZ2ludGluZ0BiZmkuY28uaWQiLCJpYXQiOjE2NTcwMjY1NTgsImV4cCI6MTY1NzExMjk1OH0.U56Rz80HHix-hQibLtObA22FzV4gbUQ65oLrTx4m3ME1U45SnFLkLVMjXTwdGzLfntXF2FlHeyjZOERoMYYHSg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"code\": \"string\",\r\n  \"capacity\": 0,\r\n  \"make\": \"string\",\r\n  \"agencyId\": 0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://selfhy-final-project.herokuapp.com/api/v1/bus/1",
+							"protocol": "https",
+							"host": [
+								"selfhy-final-project",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"bus",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Bus",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzZWxmaHkuZ2ludGluZ0BiZmkuY28uaWQiLCJpYXQiOjE2NTcwMjY1NTgsImV4cCI6MTY1NzExMjk1OH0.U56Rz80HHix-hQibLtObA22FzV4gbUQ65oLrTx4m3ME1U45SnFLkLVMjXTwdGzLfntXF2FlHeyjZOERoMYYHSg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://selfhy-final-project.herokuapp.com/api/v1/bus/7",
+							"protocol": "https",
+							"host": [
+								"selfhy-final-project",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"bus",
+								"7"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Stop",
+			"item": [
+				{
+					"name": "List Stop",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzZWxmaHkuZ2ludGluZ0BiZmkuY28uaWQiLCJpYXQiOjE2NTcwMjY1NTgsImV4cCI6MTY1NzExMjk1OH0.U56Rz80HHix-hQibLtObA22FzV4gbUQ65oLrTx4m3ME1U45SnFLkLVMjXTwdGzLfntXF2FlHeyjZOERoMYYHSg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://selfhy-final-project.herokuapp.com/api/v1/reservation/stops/",
+							"protocol": "https",
+							"host": [
+								"selfhy-final-project",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"reservation",
+								"stops",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Detail Stop",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzZWxmaHkuZ2ludGluZ0BiZmkuY28uaWQiLCJpYXQiOjE2NTcwMjY1NTgsImV4cCI6MTY1NzExMjk1OH0.U56Rz80HHix-hQibLtObA22FzV4gbUQ65oLrTx4m3ME1U45SnFLkLVMjXTwdGzLfntXF2FlHeyjZOERoMYYHSg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://selfhy-final-project.herokuapp.com/api/v1/reservation/stops/1",
+							"protocol": "https",
+							"host": [
+								"selfhy-final-project",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"reservation",
+								"stops",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Stop",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzZWxmaHkuZ2ludGluZ0BiZmkuY28uaWQiLCJpYXQiOjE2NTcwMjY1NTgsImV4cCI6MTY1NzExMjk1OH0.U56Rz80HHix-hQibLtObA22FzV4gbUQ65oLrTx4m3ME1U45SnFLkLVMjXTwdGzLfntXF2FlHeyjZOERoMYYHSg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"code\": \"string\",\r\n  \"name\": \"string\",\r\n  \"detail\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://selfhy-final-project.herokuapp.com/api/v1/reservation/stops/",
+							"protocol": "https",
+							"host": [
+								"selfhy-final-project",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"reservation",
+								"stops",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Stop",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzZWxmaHkuZ2ludGluZ0BiZmkuY28uaWQiLCJpYXQiOjE2NTcwMjY1NTgsImV4cCI6MTY1NzExMjk1OH0.U56Rz80HHix-hQibLtObA22FzV4gbUQ65oLrTx4m3ME1U45SnFLkLVMjXTwdGzLfntXF2FlHeyjZOERoMYYHSg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"code\": \"string\",\r\n  \"name\": \"string\",\r\n  \"detail\": \"string\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://selfhy-final-project.herokuapp.com/api/v1/reservation/stops/1",
+							"protocol": "https",
+							"host": [
+								"selfhy-final-project",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"reservation",
+								"stops",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Stop",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzZWxmaHkuZ2ludGluZ0BiZmkuY28uaWQiLCJpYXQiOjE2NTcwMjY1NTgsImV4cCI6MTY1NzExMjk1OH0.U56Rz80HHix-hQibLtObA22FzV4gbUQ65oLrTx4m3ME1U45SnFLkLVMjXTwdGzLfntXF2FlHeyjZOERoMYYHSg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://selfhy-final-project.herokuapp.com/api/v1/reservation/stops/1",
+							"protocol": "https",
+							"host": [
+								"selfhy-final-project",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"reservation",
+								"stops",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Trip",
+			"item": [
+				{
+					"name": "List Trip",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzZWxmaHkuZ2ludGluZ0BiZmkuY28uaWQiLCJpYXQiOjE2NTcwMjY1NTgsImV4cCI6MTY1NzExMjk1OH0.U56Rz80HHix-hQibLtObA22FzV4gbUQ65oLrTx4m3ME1U45SnFLkLVMjXTwdGzLfntXF2FlHeyjZOERoMYYHSg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://selfhy-final-project.herokuapp.com/api/v1/reservation/trip",
+							"protocol": "https",
+							"host": [
+								"selfhy-final-project",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"reservation",
+								"trip"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List Trip By Stops",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzZWxmaHkuZ2ludGluZ0BiZmkuY28uaWQiLCJpYXQiOjE2NTcwMjY1NTgsImV4cCI6MTY1NzExMjk1OH0.U56Rz80HHix-hQibLtObA22FzV4gbUQ65oLrTx4m3ME1U45SnFLkLVMjXTwdGzLfntXF2FlHeyjZOERoMYYHSg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"sourceStopid\": 0,\r\n   \"destStopId\": 0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://selfhy-final-project.herokuapp.com/api/v1/reservation/tripsbystops",
+							"protocol": "https",
+							"host": [
+								"selfhy-final-project",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"reservation",
+								"tripsbystops"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Detail Trip",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzZWxmaHkuZ2ludGluZ0BiZmkuY28uaWQiLCJpYXQiOjE2NTcwMjY1NTgsImV4cCI6MTY1NzExMjk1OH0.U56Rz80HHix-hQibLtObA22FzV4gbUQ65oLrTx4m3ME1U45SnFLkLVMjXTwdGzLfntXF2FlHeyjZOERoMYYHSg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://selfhy-final-project.herokuapp.com/api/v1/reservation/trip/1",
+							"protocol": "https",
+							"host": [
+								"selfhy-final-project",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"reservation",
+								"trip",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Trip",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzZWxmaHkuZ2ludGluZ0BiZmkuY28uaWQiLCJpYXQiOjE2NTcwMjY1NTgsImV4cCI6MTY1NzExMjk1OH0.U56Rz80HHix-hQibLtObA22FzV4gbUQ65oLrTx4m3ME1U45SnFLkLVMjXTwdGzLfntXF2FlHeyjZOERoMYYHSg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"fare\": 0,\r\n  \"journeyTime\": 0,\r\n  \"sourceStopId\": 0,\r\n  \"agencyId\": 0,\r\n  \"busId\": 0,\r\n  \"destStopId\": 0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://selfhy-final-project.herokuapp.com/api/v1/reservation/trip",
+							"protocol": "https",
+							"host": [
+								"selfhy-final-project",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"reservation",
+								"trip"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Trip",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzZWxmaHkuZ2ludGluZ0BiZmkuY28uaWQiLCJpYXQiOjE2NTcwMjY1NTgsImV4cCI6MTY1NzExMjk1OH0.U56Rz80HHix-hQibLtObA22FzV4gbUQ65oLrTx4m3ME1U45SnFLkLVMjXTwdGzLfntXF2FlHeyjZOERoMYYHSg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"fare\": 0,\r\n  \"journeyTime\": 0,\r\n  \"sourceStopId\": 0,\r\n  \"agencyId\": 0,\r\n  \"busId\": 0,\r\n  \"destStopId\": 0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://selfhy-final-project.herokuapp.com/api/v1/reservation/trip/1",
+							"protocol": "https",
+							"host": [
+								"selfhy-final-project",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"reservation",
+								"trip",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Trip",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzZWxmaHkuZ2ludGluZ0BiZmkuY28uaWQiLCJpYXQiOjE2NTcwMjY1NTgsImV4cCI6MTY1NzExMjk1OH0.U56Rz80HHix-hQibLtObA22FzV4gbUQ65oLrTx4m3ME1U45SnFLkLVMjXTwdGzLfntXF2FlHeyjZOERoMYYHSg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://selfhy-final-project.herokuapp.com/api/v1/reservation/trip/1",
+							"protocol": "https",
+							"host": [
+								"selfhy-final-project",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"reservation",
+								"trip",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Trip Schedule",
+			"item": [
+				{
+					"name": "List Trip Schedule",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzZWxmaHkuZ2ludGluZ0BiZmkuY28uaWQiLCJpYXQiOjE2NTcwMjY1NTgsImV4cCI6MTY1NzExMjk1OH0.U56Rz80HHix-hQibLtObA22FzV4gbUQ65oLrTx4m3ME1U45SnFLkLVMjXTwdGzLfntXF2FlHeyjZOERoMYYHSg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://selfhy-final-project.herokuapp.com/api/v1/reservation/tripschedules/",
+							"protocol": "https",
+							"host": [
+								"selfhy-final-project",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"reservation",
+								"tripschedules",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Detail Trip Schedule",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzZWxmaHkuZ2ludGluZ0BiZmkuY28uaWQiLCJpYXQiOjE2NTcwMjY1NTgsImV4cCI6MTY1NzExMjk1OH0.U56Rz80HHix-hQibLtObA22FzV4gbUQ65oLrTx4m3ME1U45SnFLkLVMjXTwdGzLfntXF2FlHeyjZOERoMYYHSg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://selfhy-final-project.herokuapp.com/api/v1/reservation/tripschedules/1",
+							"protocol": "https",
+							"host": [
+								"selfhy-final-project",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"reservation",
+								"tripschedules",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Trip Schedule",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzZWxmaHkuZ2ludGluZ0BiZmkuY28uaWQiLCJpYXQiOjE2NTcwMjY1NTgsImV4cCI6MTY1NzExMjk1OH0.U56Rz80HHix-hQibLtObA22FzV4gbUQ65oLrTx4m3ME1U45SnFLkLVMjXTwdGzLfntXF2FlHeyjZOERoMYYHSg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"tripDate\": \"string\",\r\n    \"availableSeats\": 0,\r\n    \"tripId\": 0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://selfhy-final-project.herokuapp.com/api/v1/reservation/tripschedules/",
+							"protocol": "https",
+							"host": [
+								"selfhy-final-project",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"reservation",
+								"tripschedules",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Trip Schedule",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzZWxmaHkuZ2ludGluZ0BiZmkuY28uaWQiLCJpYXQiOjE2NTcwMjY1NTgsImV4cCI6MTY1NzExMjk1OH0.U56Rz80HHix-hQibLtObA22FzV4gbUQ65oLrTx4m3ME1U45SnFLkLVMjXTwdGzLfntXF2FlHeyjZOERoMYYHSg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"tripDate\": \"string\",\r\n    \"availableSeats\": 0,\r\n    \"tripId\": 0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://selfhy-final-project.herokuapp.com/api/v1/reservation/tripschedules/1",
+							"protocol": "https",
+							"host": [
+								"selfhy-final-project",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"reservation",
+								"tripschedules",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Trip Schedule",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzZWxmaHkuZ2ludGluZ0BiZmkuY28uaWQiLCJpYXQiOjE2NTcwMjY1NTgsImV4cCI6MTY1NzExMjk1OH0.U56Rz80HHix-hQibLtObA22FzV4gbUQ65oLrTx4m3ME1U45SnFLkLVMjXTwdGzLfntXF2FlHeyjZOERoMYYHSg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://selfhy-final-project.herokuapp.com/api/v1/reservation/tripschedules/1",
+							"protocol": "https",
+							"host": [
+								"selfhy-final-project",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"reservation",
+								"tripschedules",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Ticket",
+			"item": [
+				{
+					"name": "List Ticket",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzZWxmaHkuZ2ludGluZ0BiZmkuY28uaWQiLCJpYXQiOjE2NTcwMjY1NTgsImV4cCI6MTY1NzExMjk1OH0.U56Rz80HHix-hQibLtObA22FzV4gbUQ65oLrTx4m3ME1U45SnFLkLVMjXTwdGzLfntXF2FlHeyjZOERoMYYHSg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://selfhy-final-project.herokuapp.com/api/v1/reservation/bookticket/",
+							"protocol": "https",
+							"host": [
+								"selfhy-final-project",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"reservation",
+								"bookticket",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Detail Ticket",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzZWxmaHkuZ2ludGluZ0BiZmkuY28uaWQiLCJpYXQiOjE2NTcwMjY1NTgsImV4cCI6MTY1NzExMjk1OH0.U56Rz80HHix-hQibLtObA22FzV4gbUQ65oLrTx4m3ME1U45SnFLkLVMjXTwdGzLfntXF2FlHeyjZOERoMYYHSg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://selfhy-final-project.herokuapp.com/api/v1/reservation/bookticket/1",
+							"protocol": "https",
+							"host": [
+								"selfhy-final-project",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"reservation",
+								"bookticket",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Ticket",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzZWxmaHkuZ2ludGluZ0BiZmkuY28uaWQiLCJpYXQiOjE2NTcwMjY1NTgsImV4cCI6MTY1NzExMjk1OH0.U56Rz80HHix-hQibLtObA22FzV4gbUQ65oLrTx4m3ME1U45SnFLkLVMjXTwdGzLfntXF2FlHeyjZOERoMYYHSg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"seatNumber\": 0,\r\n    \"cancellable\": true,\r\n    \"journeyDate\": \"string\",\r\n    \"passenger\": 0,\r\n    \"tripScheduleId\": 0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://selfhy-final-project.herokuapp.com/api/v1/reservation/bookticket/",
+							"protocol": "https",
+							"host": [
+								"selfhy-final-project",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"reservation",
+								"bookticket",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Ticket",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzZWxmaHkuZ2ludGluZ0BiZmkuY28uaWQiLCJpYXQiOjE2NTcwMjY1NTgsImV4cCI6MTY1NzExMjk1OH0.U56Rz80HHix-hQibLtObA22FzV4gbUQ65oLrTx4m3ME1U45SnFLkLVMjXTwdGzLfntXF2FlHeyjZOERoMYYHSg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"seatNumber\": 0,\r\n    \"cancellable\": true,\r\n    \"journeyDate\": \"string\",\r\n    \"passenger\": 0,\r\n    \"tripScheduleId\": 0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://selfhy-final-project.herokuapp.com/api/v1/reservation/bookticket/1",
+							"protocol": "https",
+							"host": [
+								"selfhy-final-project",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"reservation",
+								"bookticket",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Ticket",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzZWxmaHkuZ2ludGluZ0BiZmkuY28uaWQiLCJpYXQiOjE2NTcwMjY1NTgsImV4cCI6MTY1NzExMjk1OH0.U56Rz80HHix-hQibLtObA22FzV4gbUQ65oLrTx4m3ME1U45SnFLkLVMjXTwdGzLfntXF2FlHeyjZOERoMYYHSg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://selfhy-final-project.herokuapp.com/api/v1/reservation/bookticket/1",
+							"protocol": "https",
+							"host": [
+								"selfhy-final-project",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"reservation",
+								"bookticket",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
