@@ -104,7 +104,8 @@ public class TicketController {
 		ticket.setPassenger(user);
 		ticket.setTripSchedule(tripSchedule);
 
-		Ticket updatedTicket = ticketRepository.save(ticket);
+		ticketRepository.save(ticket);
+		Ticket updatedTicket = ticket;
 
 		return ResponseEntity.ok(new MessageResponse<Ticket>(true, "Success Updating Data", updatedTicket));
 	}
