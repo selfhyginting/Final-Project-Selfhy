@@ -12,6 +12,7 @@ import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -132,5 +133,23 @@ public class UserController {
 		User updatedUser = userRepository.save(user);
 
 		return ResponseEntity.ok(updatedUser);
+	}
+
+	@DeleteMapping("/{id}")
+	@ApiOperation(value = "", authorizations = { @Authorization(value = "apiKey") })
+	@PreAuthorize("hasRole('USER') or hasRole('ADMIN')")
+	public ResponseEntity<?> deleteUser(@PathVariable(value = "id") Long id) {
+		String result = "";
+		try {
+			userRepository.findById(id).get();
+			
+			result = "Success Delete User with Id: " + id;
+			userRepository.deleteById(id);
+			
+			return ResponseEntity.ok(new MessageResponse<User>(true, result));
+		} catch (Exception e) {
+			result = "Data with Id: " + id + " Not Found";
+			return ResponseEntity.ok(new MessageResponse<User>(false, result));
+		}
 	}
 }
