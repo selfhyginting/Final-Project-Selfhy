@@ -71,8 +71,11 @@ public class BusController {
 	public ResponseEntity<?> addBus(@RequestBody BusRequest busRequest) {
 		Agency agency= agencyRepository.findById(busRequest.getAgencyId()).get();
 		Bus bus= new Bus(busRequest.getCode(), busRequest.getCapacity(), busRequest.getMake(), agency);
-		return ResponseEntity
-				.ok(new MessageResponse<Bus>(true, "Success Adding Data", busRepository.save(bus)));
+		
+		busRepository.save(bus);
+		
+		return ResponseEntity.ok(new MessageResponse("Success Adding Data"));
+		
 	}
 
 	@PutMapping("/{id}")

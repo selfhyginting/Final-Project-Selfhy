@@ -79,8 +79,11 @@ public class TicketController {
 		User user = userRepository.findById(ticketRequest.getPassenger()).get();
 		TripSchedule tripSchedule= tripScheduleRepository.findById(ticketRequest.getTripScheduleId()).get();
 		Ticket ticket = new Ticket(ticketRequest.getSeatNumber(), ticketRequest.getCancellable(), ticketRequest.getJourneyDate(), user, tripSchedule);
-		return ResponseEntity
-				.ok(new MessageResponse<Ticket>(true, "Success Adding Data", ticketRepository.save(ticket)));
+		
+		ticketRepository.save(ticket);
+		
+		return ResponseEntity.ok(new MessageResponse("Success Adding Data"));
+	
 	}
 
 	@PutMapping("/{id}")

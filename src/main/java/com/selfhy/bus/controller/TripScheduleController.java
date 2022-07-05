@@ -73,8 +73,10 @@ public class TripScheduleController {
 	public ResponseEntity<?> addTripSchedule(@Valid @RequestBody TripScheduleRequest tripScheduleRequest) {
 		Trip trip = tripRepository.findById(tripScheduleRequest.getTripId()).get();
 		TripSchedule tripSchedule = new TripSchedule(tripScheduleRequest.getTripDate(), tripScheduleRequest.getAvailableSeats(), trip);
-		return ResponseEntity
-				.ok(new MessageResponse<TripSchedule>(true, "Success Adding Data", tripScheduleRepository.save(tripSchedule)));
+		
+		tripScheduleRepository.save(tripSchedule);
+		
+		return ResponseEntity.ok(new MessageResponse("Success Adding Data"));
 	}
 
 	@PutMapping("/{id}")

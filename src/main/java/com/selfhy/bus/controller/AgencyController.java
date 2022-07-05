@@ -75,8 +75,10 @@ public class AgencyController {
 	public ResponseEntity<?> addAgency(@Valid @RequestBody AgencyRequest agencyRequest) {
 		User user = userRepository.findById(agencyRequest.getOwner()).get();
 		Agency agency = new Agency(agencyRequest.getCode(), agencyRequest.getName(), agencyRequest.getDetails(), user);
-		return ResponseEntity
-				.ok(new MessageResponse<Agency>(true, "Success Adding Data", agencyRepository.save(agency)));
+
+		agencyRepository.save(agency);
+
+		return ResponseEntity.ok(new MessageResponse("Success Adding Data"));
 	}
 
 	@PutMapping("/{id}")

@@ -103,8 +103,11 @@ public class TripController {
 		Bus bus = busRepository.findById(tripRequest.getBusId()).get();
 		Agency agency = agencyRepository.findById(tripRequest.getAgencyId()).get();
 		Trip trip = new Trip(tripRequest.getFare(), tripRequest.getJourneyTime(), sourceStop, destStop, bus,agency);
-		return ResponseEntity
-				.ok(new MessageResponse<Trip>(true, "Success Adding Data", tripRepository.save(trip)));
+		
+		tripRepository.save(trip);
+		
+		return ResponseEntity.ok(new MessageResponse("Success Adding Data"));
+		
 	}
 
 	@PutMapping("/trip/{id}")

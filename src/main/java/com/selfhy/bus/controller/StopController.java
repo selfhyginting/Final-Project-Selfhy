@@ -69,8 +69,11 @@ public class StopController {
 	@PreAuthorize("hasRole('ADMIN')")
 	public ResponseEntity<?> addStop(@Valid @RequestBody StopRequest stopRequest) {
 		Stop stop = new Stop(stopRequest.getCode(), stopRequest.getName(), stopRequest.getDetail());
-		return ResponseEntity
-				.ok(new MessageResponse<Stop>(true, "Success Adding Data", stopRepository.save(stop)));
+		
+		stopRepository.save(stop);
+		
+		return ResponseEntity.ok(new MessageResponse("Success Adding Data"));
+	
 	}
 
 	@PutMapping("/{id}")
